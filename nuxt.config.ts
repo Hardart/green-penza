@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@pinia/nuxt', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@pinia/nuxt'],
   build: {
     transpile: ['gsap'],
   },
