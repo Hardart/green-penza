@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl lg:text-7xl font-semibold md:font-bold mb-12;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply max-sm:text-3xl max-lg:my-6 text-4xl mb-10;
+  }
+
+  h4 {
+    @apply text-2xl mb-2;
+  }
+
+  h5 {
+    @apply text-lg mb-2 font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-2 px-5 cursor-pointer rounded-lg shadow-md;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
+  .sort-btn {
+    @apply bg-slate-500 px-4 py-1 rounded text-gray-50 hover:bg-slate-600 dark:bg-slate-700 dark:hover:bg-slate-800 dark:text-gray-300;
+  }
+
+  .section {
+    @apply w-full px-3 sm:px-6 lg:px-8 relative;
+  }
+
+  .card-default {
+    @apply bg-neutral-50 text-gray-800 dark:bg-neutral-800 dark:text-teal-50;
+  }
+
+  .section-default {
+    @apply bg-neutral-100 text-gray-800 dark:bg-neutral-800 dark:text-teal-50;
+  }
+
+  .section-secondary {
+    @apply bg-neutral-600 text-teal-50 dark:bg-neutral-900;
+  }
+
+  .card-primary,
+  .section-primary {
+    @apply bg-emerald-500 text-teal-50 dark:bg-emerald-800;
+  }
+
+  .section-muted {
+    @apply bg-gray-200 text-gray-900 dark:text-teal-50 dark:bg-neutral-700/30;
+  }
+
+  .card {
+    @apply relative shadow rounded-xl;
+  }
+
+  .card-header {
+    @apply relative w-auto;
+  }
+
+  .card-media {
+    @apply aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-72;
+  }
+
+  .card-media img {
+    @apply h-full w-full object-cover object-center lg:h-full lg:w-full;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .card-body {
+    @apply px-4 py-6 lg:px-8 xl:px-10 w-full;
+  }
+
+  .mobile-page-link {
+    @apply py-2 px-4 hover:bg-emerald-600/60 shadow rounded-lg cursor-pointer focus:outline-none focus-visible:ring focus-visible:ring-emerald-500 focus-visible:ring-opacity-75;
+  }
+
+  .sub-link {
+    @apply focus:outline-none focus-visible:ring focus-visible:ring-emerald-500 focus-visible:ring-opacity-75;
+  }
+
+  .uk-open svg {
+    @apply rotate-90 transform;
+  }
+
+  .faq-list {
+    @apply pl-5 font-light space-y-1 md:space-y-2 list-disc max-md:text-sm;
+  }
+}
+
+@font-face {
+  font-family: Caveat;
+  font-weight: 400;
+  src: url('~/assets/fonts/Caveat/Caveat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Caveat;
+  font-weight: 700;
+  src: url('~/assets/fonts/Caveat/Caveat-Bold.ttf') format('truetype');
+}
