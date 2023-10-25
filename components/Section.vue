@@ -1,12 +1,9 @@
 <template>
-  <div
-    class="section bg-cover bg-no-repeat"
-    :class="[Color[color || 'default'], PaddingY[padding || 'default']]"
-    :style="[img ? `background-image: url(images/elements/${img})` : '']"
-  >
-    <div class="max-w-2xl md:max-w-4xl lg:max-w-7xl mx-auto lg:px-8">
+  <div class="section" :class="[Color[color || 'default'], PaddingY[padding || 'default']]">
+    <div class="max-w-2xl md:max-w-4xl lg:max-w-7xl mx-auto lg:px-8 z-10 relative">
       <slot />
     </div>
+    <div class="absolute inset-0 overflow-hidden" v-if="img"><img class="object-fill w-full" :src="`images/elements/${img}`" alt="" /></div>
   </div>
 </template>
 
@@ -43,3 +40,4 @@ useHead({
     : [],
 })
 </script>
+<!-- :style="[img ? `background-image: url(images/elements/${img})` : '']" -->
