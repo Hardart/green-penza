@@ -26,6 +26,7 @@
     "pinia": "^2.1.4"
   },
   "dependencies": {
-    "gsap": "^3.12.1"
+    "gsap": "^3.12.1",
+    "nuxt-lazy-hydrate": "^1.0.0"
   }
 }

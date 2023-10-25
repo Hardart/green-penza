@@ -1,3 +1,4 @@
+<script setup lang="ts"></script>
 <template>
   <NuxtLayout>
     <SectionsMainHero />
@@ -5,6 +6,7 @@
     <SectionsMainProducts />
     <SectionsMainPrincipals />
     <SectionsMainCategories />
+    <LazySectionsMainSlider />
     <SectionsMainPaymentsVariants />
   </NuxtLayout>
 </template>

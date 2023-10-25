@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4">
+  <div class="px-4 bg-neutral-100 text-gray-800 dark:bg-neutral-800 dark:text-teal-50">
     <slot />
   </div>
 </template>

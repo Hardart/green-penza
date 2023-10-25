@@ -1,5 +1,9 @@
 <template>
-  <div class="section bg-cover bg-no-repeat" :class="[Color[color || 'default'], PaddingY[padding || 'default']]" :style="[img ? `background-image: url(images/elements/${img})` : '']">
+  <div
+    class="section bg-cover bg-no-repeat"
+    :class="[Color[color || 'default'], PaddingY[padding || 'default']]"
+    :style="[img ? `background-image: url(images/elements/${img})` : '']"
+  >
     <div class="max-w-2xl md:max-w-4xl lg:max-w-7xl mx-auto lg:px-8">
       <slot />
     </div>
@@ -20,9 +24,22 @@ enum PaddingY {
   small = 'py-4 md:py-6 lg:py-8',
   none = '',
 }
-defineProps<{
+const props = defineProps<{
   color?: 'primary' | 'secondary' | 'muted'
   padding?: 'none' | 'small' | 'large'
   img?: string
+  preload?: boolean
 }>()
+
+useHead({
+  link: props.preload
+    ? [
+        {
+          rel: 'preload',
+          as: 'image',
+          href: `/images/elements/${props.img}`,
+        },
+      ]
+    : [],
+})
 </script>

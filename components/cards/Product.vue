@@ -1,5 +1,5 @@
 <template>
-  <div class="group card bg-neutral-50" :data-cat="category.slug">
+  <div class="group card" :data-cat="category.slug">
     <div class="card-header">
       <NuxtLink :to="link">
         <div class="card-media cursor-pointer">

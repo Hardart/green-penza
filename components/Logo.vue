@@ -1,7 +1,7 @@
 <template>
   <NuxtLink to="/" class="flex items-center">
     <div class="flex flex-shrink-0 items-center">
-      <img :class="Logo[size]" class="w-auto block" src="/logo.svg" alt="Your Company" />
+      <img class="w-auto block" :class="Logo[size]" src="/logo.svg" alt="Your Company" />
     </div>
   </NuxtLink>
 </template>

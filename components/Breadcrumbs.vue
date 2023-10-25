@@ -1,13 +1,13 @@
 <template>
-  <ul class="flex flex-wrap bg-gray-200/40 max-md:text-sm pl-2 lg:-mx-10 lg:pl-10 py-3 mb-8 items-center rounded-lg select-none">
+  <ul class="flex flex-wrap bg-gray-200/40 dark:bg-neutral-700 max-md:text-sm pl-2 lg:-mx-10 lg:pl-10 py-3 mb-8 items-center rounded-lg select-none">
     <li v-if="isShowHomePath">
-      <NuxtLink to="/" class="flex items-center text-green-600 hover:text-green-500"><span class="i-mdi-home text-2xl lg:text-3xl"></span></NuxtLink>
+      <NuxtLink to="/" class="flex items-center text-green-600 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400"><span class="i-mdi-home text-2xl lg:text-3xl"></span></NuxtLink>
     </li>
 
     <li v-for="(item, i) in breadcrumbs">
       <span class="mx-2 text-neutral-500" v-if="isShowHomePath || i">-</span>
       <NuxtLink :to="item.link" class="text-green-600 hover:text-green-500" v-if="i < breadcrumbs.length - 1">{{ item.title }}</NuxtLink>
-      <span class="text-neutral-500" v-else>{{ item.title }}</span>
+      <span class="text-neutral-500 dark:text-neutral-400" v-else>{{ item.title }}</span>
     </li>
   </ul>
 </template>

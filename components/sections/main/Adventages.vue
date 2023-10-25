@@ -1,5 +1,5 @@
 <template>
-  <div class="adventage-trigger overflow-hidden flex flex-col items-center bg-gray-200/80 rounded-2xl p-4 lg:p-24 shadow-md z-10">
+  <div class="adventage-trigger overflow-hidden flex flex-col items-center dark:text-teal-100 bg-gray-200/80 dark:bg-neutral-700 rounded-2xl p-4 lg:p-24 shadow-md z-10">
     <h3 class="adventage opacity-0 top-48 relative font-bold mt-10 lg:mt-4 text-center">Достоинства нашей компании</h3>
     <div class="grid md:grid-cols-3 max-w-7xl lg:gap-x-2 xl:gap-x-10">
       <div class="adventage relative opacity-0 top-48 text-center sm:max-md:text-left sm:max-md:flex" v-for="card in adventages">

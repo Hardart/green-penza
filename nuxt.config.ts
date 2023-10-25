@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'ru' },
-      script: [{ src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.22/js/uikit-core.min.js' }],
+      script: [{ src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.22/js/uikit-core.min.js', tagPriority: 'critical' }],
     },
   },
   nitro: {
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@pinia/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@pinia/nuxt', 'nuxt-lazy-hydrate'],
   build: {
     transpile: ['gsap'],
   },
